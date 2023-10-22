@@ -1,0 +1,136 @@
+.modal--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+   .modal--content {
+    background-color: white;
+    width: 60%;
+    height: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    color: black;
+    background-color: rgb(42, 41, 41);
+
+  }
+
+  .modal--description{
+    padding: 1rem;
+    background-color: rgb(42, 41, 41);
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height:max-content;
+  }
+  
+.modal--title {
+    margin-top: 0;
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  .modal--overview {
+    margin-bottom: 0;
+    color: #fff;
+  }
+  .modal--pic{
+    height: 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .modal--rating{
+    padding: 0.3rem;
+    background-color: #feed01;
+    border-radius: 5rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: 1rem;
+
+  }
+.modal--genre{
+    display: flex;
+    align-self: flex-start;
+    gap: 1rem;
+}
+.modal--genre>p{
+    background-color: #feed01;
+    width: auto;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    border-radius: 5rem;
+}
+.btn--trailer{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    top:88% !important;
+    left: 1rem !important;
+    height: 3rem !important;
+    width: 5rem !important;
+    font-size: 1.2rem !important;
+    letter-spacing: 2px !important;
+    border-radius: 5rem !important;
+    color: black !important;
+    background-color: #fff !important;
+}
+.btn--trailer:hover{
+    background-color: #c4c4c4 !important;
+}
+
+/* Mobile and tablet responsive styles */
+@media (max-width: 767px) {
+  .modal--content {
+    width: 90%;
+    height: 90%;
+  }
+
+  .modal--title {
+    font-size: 2rem;
+  }
+
+  .modal--overview {
+    font-size: 0.8rem;
+  }
+  .modal--genre{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .modal--content {
+    width: 70%;
+    height: 85%;
+  }
+
+  .modal--title {
+    font-size: 2.5rem;
+  }
+
+  .modal--overview {
+    font-size: 1rem;
+  }
+}
+

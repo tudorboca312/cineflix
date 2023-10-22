@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  }
+  
+  .search--section {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .imag {
+    height: 3rem;
+    width: 5rem;
+  }
+  
+  .search--bar {
+    background-color: #fff;
+    border-radius: 0.5rem;
+  }
+  
+  .search--bar .MuiInputBase-input::placeholder {
+    text-align: left;
+  }
+  
+  .btn--search {
+    background-color: #feed01 !important;
+    color: black !important;
+    font-weight: 700 !important;
+    height: 40px !important;
+  }
+  
+  .btn--search:hover {
+    background-color: #d5c703 !important;
+  }
+
+  
+  
+  /* Mobile and tablet responsive styles */
+  @media (max-width: 767px) {
+    .header {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .search--section {
+      width: 100%;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 0.5rem;
+    }
+    .btn--search{
+      padding: 1.3rem !important;
+    }
+  
+    .search--bar {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+      padding: 1rem;
+    }
+  }
+  

@@ -1,0 +1,43 @@
+
+   .img--poster {
+    height: 20rem;
+    width: 13rem;
+    border-radius: 2rem;
+  }
+  .movie--card {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .movie--card:hover {
+    transform: scale(1.15);
+    background-color: black;
+  }
+  .movie--card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2rem;
+  }
+  /* .card--container{
+    overflow-y: hidden;
+    overflow-x: visible;
+  } */
+  
+  @media (max-width: 767px) {
+    .img--poster {
+      height: 15rem;
+      width: 10rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .img--poster {
+      height: 18rem;
+      width: 12rem;
+    }
+  }
+  

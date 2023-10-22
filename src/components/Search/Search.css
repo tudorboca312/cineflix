@@ -1,0 +1,40 @@
+.search--container{
+    height: 100%;
+    padding: 2rem;
+    padding-top: 6rem;
+}
+.search--results--cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.movie-not-found{
+    margin-top: 30vh;
+    font-size: 3rem;
+}
+
+/* Mobile and tablet responsive styles */
+@media (max-width: 767px) {
+    .resultTitle {
+      font-size: 1.5rem;
+    }
+  
+    .img--search {
+      height: 20rem;
+      width: 13rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .resultTitle {
+      font-size: 2rem;
+    }
+  
+    .img--search {
+      height: 25rem;
+      width: 16.6rem;
+    }
+  }
+  
