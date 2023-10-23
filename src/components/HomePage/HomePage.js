@@ -117,7 +117,7 @@ function HomePage({
           {numberToGenre(movie[currentIndex]?.genre_ids)}
         </div>
       </section>
-      {renderSections()}
+      <div className="all--movies">{renderSections()}</div>
     </div>
   );
 }
