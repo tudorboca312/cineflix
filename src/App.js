@@ -6,9 +6,11 @@ import { useEffect, useState } from "react";
 import { genres, fetchMoviesByGenre } from "./fetching";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Search from "./components/Search/Search";
+import ErrorBoundary from "./components/HomePage/ErrorBoundary";
 
 function App() {
-  const key = "3f1cc17f68ded756485bef4e9b28c184";
+  const key = process.env.REACT_APP_API_KEY;
+
   const [movie, setMovie] = useState([]);
   const [genre, setGenre] = useState({});
   const [searchMovie, setSearchMovie] = useState([]);
@@ -67,7 +69,6 @@ function App() {
     fetchPopularMovies();
     fetchGenre();
     fetchMoviesByAllGenres();
-    // fetchSearch();
   }, []);
 
   return (
@@ -76,9 +77,11 @@ function App() {
         <Header fetchSearch={fetchSearch} />
         <Routes>
           <Route
-            path="/"
+            path="/cineflix"
             element={
-              <HomePage movie={movie} genre={genre} {...moviesByGenre} />
+              <ErrorBoundary>
+                <HomePage movie={movie} genre={genre} {...moviesByGenre} />
+              </ErrorBoundary>
             }
           />
           <Route

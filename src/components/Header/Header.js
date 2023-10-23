@@ -12,10 +12,11 @@ function Header({ fetchSearch }) {
     e.preventDefault();
     fetchSearch(searchInput);
     navigate("/search");
+    setSearchInput("");
   };
 
   const goHome = () => {
-    navigate("/");
+    navigate("/cineflix");
   };
 
   return (
@@ -28,27 +29,30 @@ function Header({ fetchSearch }) {
         style={{ cursor: "pointer" }}
       />
       <section className="search--section">
-        <TextField
-          className="search--bar"
-          onChange={(e) => setSearchInput(e.target.value)}
-          InputProps={{
-            style: {
-              height: 42,
-            },
-          }}
-          InputLabelProps={{
-            shrink: true,
-          }}
-          placeholder="Search Movie..."
-        />
-        <Button
-          onClick={handleSearch}
-          variant="contained"
-          size="small"
-          className="btn--search"
-        >
-          Search Movie
-        </Button>
+        <form onSubmit={handleSearch}>
+          <TextField
+            value={searchInput}
+            className="search--bar"
+            onChange={(e) => setSearchInput(e.target.value)}
+            InputProps={{
+              style: {
+                height: 42,
+              },
+            }}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            placeholder="Search Movie..."
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            size="small"
+            className="btn--search"
+          >
+            Search Movie
+          </Button>
+        </form>
       </section>
     </div>
   );

@@ -59,7 +59,7 @@ function Modal({ movie, genre, id, numberToGenre }) {
               /10
               <span className="movie--count">({movie.vote_count})</span>
             </span>
-          </p>{" "}
+          </p>
           <div className="modal--genre">{numberToGenre(movie.genre_ids)}</div>{" "}
         </section>
       </div>

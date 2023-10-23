@@ -1,7 +1,7 @@
 import React from "react";
 import "./MovieCard.css";
 import Modal from "./Modal/Modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function MovieCard({ movie, genre, numberToGenre }) {
   const imgPath = "https://image.tmdb.org/t/p/w500/";
@@ -13,6 +13,19 @@ function MovieCard({ movie, genre, numberToGenre }) {
     setId(movie.id);
     setModal(!modal);
   };
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape" && modal) {
+        setModal(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [modal]);
 
   return (
     <div className="card--container" onClick={handleClick}>

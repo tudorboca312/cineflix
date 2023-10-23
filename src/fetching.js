@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const key = "3f1cc17f68ded756485bef4e9b28c184";
+const key = process.env.REACT_APP_API_KEY;
 
 export const genres = [
   "action",
