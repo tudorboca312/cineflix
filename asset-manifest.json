@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cineflix/static/css/main.0f894115.css",
-    "main.js": "/cineflix/static/js/main.9ca956db.js",
+    "main.js": "/cineflix/static/js/main.fc389561.js",
     "static/media/imag001.png": "/cineflix/static/media/imag001.7ce0cd596ec68ce79aec.png",
     "index.html": "/cineflix/index.html",
     "main.0f894115.css.map": "/cineflix/static/css/main.0f894115.css.map",
-    "main.9ca956db.js.map": "/cineflix/static/js/main.9ca956db.js.map"
+    "main.fc389561.js.map": "/cineflix/static/js/main.fc389561.js.map"
   },
   "entrypoints": [
     "static/css/main.0f894115.css",
-    "static/js/main.9ca956db.js"
+    "static/js/main.fc389561.js"
   ]
 }
